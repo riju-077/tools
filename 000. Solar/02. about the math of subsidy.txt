@@ -1,0 +1,18 @@
+Option A — Use the government's actual per-KW math (fills in every gap smoothly)
+- ₹30,000 for each KW up to 2 KW
+- ₹18,000 for the 3rd KW
+- Never more than ₹78,000
+
+- So 2.5 KW would give ₹69,000 (that's ₹60,000 for the first 2 KW, plus half of ₹18,000 for the extra half KW).
+
+Option B — Just round to the nearest whole KW
+- 2.5 KW → treat as if it were... 2 or 3 KW, and use that fixed subsidy.
+- Simpler, but less exact.
+
+My one real question for you
+
+You see real approval letters at work. When a customer's system is, say, 2.5 KW — what subsidy do the banks/government actually give them? Does it match Option A's smooth math, or do they round it?
+
+You know this better than I do — I'll build whichever one matches reality. If you're not sure right now, Option A is the safer default because it's the government's official formula.
+
+Does this make more sense now?
