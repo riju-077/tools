@@ -1,0 +1,27 @@
+All wired up correctly. The slider is back.
+
+How it works now (both controls, kept in sync)
+
+There are now two ways to set the down payment, and they mirror each other automatically:
+
+1. Type the loan amount → the slider moves to match, and the down payment updates.
+2. Drag the down-payment slider → the loan amount field updates, and the down payment updates.
+
+So someone who wants to pay more than the minimum can just drag the slider up — exactly what you wanted. The slider also won't let them drag below the minimum (10%/20%, or the exact minimum in the in-between cost range), so it can't produce an invalid down payment. The typed loan field can still go below (that's when the helpful orange warning appears with the max-loan suggestion).
+
+Recap of the full input card now:
+- KW (typed, decimals) → subsidy only
+- Project cost (manual)
+- Bank
+- Loan amount (typed) + red error if > project cost
+- Down payment slider (optional "pay more" control, synced with loan)
+- Down payment display (₹ and %)
+
+---
+This is a good moment to actually see it, since the layout has changed a fair bit and the slider ↔ loan syncing is the kind of thing that's best confirmed by eye. In your VS Code terminal:
+
+python -m http.server
+
+Then open http://localhost:8000, and try: drag the slider, type a loan amount, type a silly loan bigger than the cost, change KW to 2.5. Everything should stay consistent.
+
+Tell me how it looks — then we commit. Want to view it now?
