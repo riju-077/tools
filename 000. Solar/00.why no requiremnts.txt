@@ -1,0 +1,13 @@
+Why there's no requirements.txt
+
+requirements.txt is a Python thing. It lists the external libraries a Python program needs so pip can install them. You know it well from your Python/SQL work.
+
+But this project has zero Python code. It's plain HTML + CSS + JavaScript that runs entirely inside the visitor's web browser. There's nothing to pip install because:
+
+- No libraries/frameworks — we deliberately used no React, no jQuery, nothing external (CLAUDE.md §3). The JavaScript uses only what every browser already has built in.
+- No backend / no server process — so there's no Python environment to set up dependencies for.
+- No build step — the files are served exactly as they are.
+
+So the "dependency list" for this project is effectively: a web browser, which everyone already has. The equivalent files by ecosystem would be requirements.txt (Python) or package.json (Node/JS) — and we intentionally have neither, because a no-dependency static site is faster, safer, and ranks better (CLAUDE.md §3, §4). That simplicity is a feature, not something missing.
+
+▎ The python -m http.server I mentioned earlier isn't a project dependency — it's just a throwaway way to view the files locally. It uses Python's built-in server, again nothing to install.
