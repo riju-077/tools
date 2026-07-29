@@ -1,0 +1,20 @@
+No — item 1 has nothing to do with deployment. Sorry, the word "server" is what made it sound that way. Let me separate the two clearly.
+
+Item 1 = looking at it on your own computer. Private. Nothing goes online.
+
+The python -m http.server command is not putting your site on the internet. It's a little trick that runs inside your own laptop so your browser will agree to open the files properly. Only you can see it. Close the terminal and it's gone. Think of it as "preview mode" — the same as opening a Word document to check how it looks before printing.
+
+The word "server" here is misleading. It's not a server on the internet; it's a two-second helper running on your machine because of that browser security rule I mentioned.
+
+Item 2 = deployment. That's the real "goes online" step.
+
+That's Cloudflare Pages — connecting your GitHub repo so the site gets a real web address that anyone in the world can visit. That's a separate job, and we haven't done it yet.
+
+So the order is:
+
+1. Look at it privately on your laptop first (item 1) — catch anything ugly or broken while nobody's watching.
+2. Then put it online (item 2), once you're happy with it.
+
+You don't have to do item 1 at all, strictly speaking — we could deploy first. But it's much nicer to spot a squashed layout on your own screen than on a live public site.
+
+Want me to just start the preview for you? You'd only need to click a link and look at it.
