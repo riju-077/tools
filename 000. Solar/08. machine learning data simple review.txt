@@ -1,0 +1,27 @@
+My fault — that was too dense. Let me say it plainly, four simple things.
+
+1. Solar costs less than we assumed.
+
+Our calculator assumes ₹70,000 for each 1 kW. But in your real sheet, most jobs worked out around ₹65,000 per kW. So the number we start people off with is a bit too high. Easy to fix.
+
+2. One row has a typing mistake.
+
+Row 4 (the 3.66 kW SBI one). The loan amount says 19,500. It should be 1,95,000 — a zero got missed while typing. Cost was
+2,25,000, down payment 30,000, so the loan has to
+
+3. One row looks odd.
+
+Row 3 (2.32 kW, PNB). The customer paid only ₹6,0. That's about 3%. But the rule says minimum 10%.So either it's another typing mistake, or that bank actually allowed less than the rule. Worth you checking that customer's
+letter — because if banks do allow it, our calculeal life.
+
+4. The big finding — almost everyone keeps their
+
+Out of your 24 customers, 23 borrowed ₹2,00,000 o line they are: 1,95,000... 1,92,000... 1,89,000... 1,88,000.
+
+Why? Because under ₹2 lakh you get a cheaper interest rate and you only need 10% down instead of 20%.
+
+Some people paid a lot extra from their own pocket just to stay under it. One customer had a ₹3,54,000 system and paid ₹1,59,000 cash — nearly half — so their loan would be ₹1,95
+                                                                                                                                Your calculator doesn't tell anyone this right no useful thing on the page. We could add a line that appears when someone's loan goes above ₹2 lakh, saying something like: "Bring your loan to ₹2,00,000 or below and you'll get a  lower interest rate and only need 10% down."
+                                                                                                                                One last thing you could do at work: your sheet dte, the tenure, or the subsidy amount the bankgave. If you start adding those three columns, then in a few months you'd be able to check every rate in the calculator against real letters — instead of some of them being educw.
+
+Does that make more sense? Tell me which part you
