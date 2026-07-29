@@ -1,0 +1,17 @@
+Total amount payable — everything that leaves your pocket, start to finish. Your down payment, plus every single EMI added together over the 10 years. It answers: "What does this whole thing cost me in the end?"
+
+Total interest paid — of that total, how much was the bank's charge rather than your actual system. It's the total above, minus the money you genuinely borrowed and kept. It answers: "What am I paying extra for the privilege of borrowing?"
+
+Interest as % of loan — that same interest expressed as a percentage of what you borrowed, so it's easy to compare between banks. It answers: "How expensive is this loan overall?"
+
+Small example with easy numbers:
+
+Say you borrow ₹1,00,000 and over the full tenure you end up repaying ₹1,20,000 in EMIs.
+
+- The extra ₹20,000 is your total interest paid
+- ₹20,000 out of ₹1,00,000 is 20% — that's your interest as % of loan
+- And if you'd also put down ₹30,000 of your own money at the start, your total amount payable is ₹30,000 + ₹1,20,000 = ₹1,50,000
+
+One thing that trips people up: the "interest as % of loan" (19.9% in your screenshot) is not the interest rate. Your interest rate might be 6% — that's charged per year, on whatever is still outstanding. The 19.9% is the total interest across all 10 years, added up. Two different things that both end up written as a percentage, which is genuinely confusing. That's worth remembering, because a customer will absolutely one day point at your page and say "you said 6%, why does it say 19.9%?"
+
+The ~ in front of each figure just marks it as an estimate — that's the convention we're using everywhere on the page for calculated numbers.
