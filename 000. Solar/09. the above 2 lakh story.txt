@@ -1,0 +1,22 @@
+The ₹2 lakh line. Let me show you what I mean with a real example.
+
+What happens today. Someone opens your calculator, has a ₹2,50,000 system, and types a loan of ₹2,10,000. The page shows them an EMI. Done. It says nothing else.
+
+But that person just crossed the ₹2 lakh line without knowing it. Because they're above it:
+
+- their interest rate jumped (SBI: 6% below the line, 8.15% above it)
+- and they now need 20% down instead of 10%
+
+If they'd borrowed ₹2,00,000 instead — just ₹10,000 less — they'd get the cheaper rate and the smaller down payment. Over 10 years that ₹10,000 difference is worth a lot more than ₹10,000 to them.
+
+that line exists.
+
+What I'm proposing: when someone types a loan above ₹2,00,000, a small note appears — only then, not always — saying roughly:   
+▎ Loans above ₹2,00,000 carry a higher interest rate and need 20% down instead of 10%. Bringing your loan to ₹2,00,000 or below would give you a cheaper rate and a smaller dow
+
+That's it. One sentence, shown at the right momen
+
+Why I keep pushing it: your own sheet proves peopers landed at or under ₹2 lakh. One paid ₹1,59,000cash on a ₹3,54,000 system just to stay under. Your customers already know this trick — because someone at a branch or someone
+like you told them. Your website visitors don't h
+
+It would also quietly answer a question your salely.
