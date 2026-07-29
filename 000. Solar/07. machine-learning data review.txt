@@ -1,0 +1,33 @@
+Read it — 24 rows, and no personal details in there, so that's clean. Genuinely useful data. Here's what it tells me.
+
+1. Your ₹70,000/kW cost assumption is too high.
+
+Cost per kW across your 24 rows ranges from ₹54,600 to ₹78,700. The median is about ₹64,800, the average about ₹66,600. Only 5 of 24 jobs came in at or above ₹70,000/kW.
+
+That number is in bank-rules.json as projectCostPerKW and sets the cost shown when the page first loads. I'd drop it to ₹65,000 so the opening example matches what people actually pay in your area. One-number change — say the word.
+
+2. There's a data-entry error in row 4.
+
+3.66, sbi, 225,000, down 30,000, loan 19,500 — the loan should be 1,95,000. A zero got dropped. Your own Margin column agrees (13.33% is calculated from the down payment, and 225,000 − 30,000 = 195,000).
+
+3. Row 3 breaks the 10% minimum rule.
+
+2.32, pnb, 180,000, down 6,000 — that's a 3.33% margin, well under the 10% floor we built into the calculator as a universal Jan Samarth rule. Every other row respects it. So either it's another typo (60,000 would give 33%), or PNB genuinely sanctioned below the minimum. Worth checking the actual letter, because if banks do go below 10%, our "below minimum" warning is stricter than reality.
+
+4. The ₹2 lakh line is a real behavioural cliff — this is the most interesting finding.
+
+23 of your 24 loans are at or below ₹2,00,000. Look at the clustering: 1,95,000 · 1,95,000 · 1,95,000 · 1,92,000 · 1,89,000 · 1,88,000 · 1,88,000 · 1,88,000 · 1,84,500 · 1,83,000 · 1,82,000 · 2,00,000 exactly. Only one loan crossed it (₹2,43,000).
+
+And people are paying a lot down to stay under it — 44.9%, 45.3%, 29.4%, 25.6%. One customer bought a 5.58 kW system costing ₹3,54,000 and put down ₹1,59,000 of their own money, purely to keep the loan at ₹1,95,000.
+
+That makes sense — below ₹2L you get the cheaper rate and the 10% margin instead of 20%. But your calculator doesn't currently tell anyone this. It's arguably the single most valuable piece of advice on the whole page, and you have the data to back it. Something like a note appearing when the loan crosses ₹2L: "Bringing your loan to ₹2,00,000 or below would lower your interest rate and reduce the required down payment from 20% to 10%."
+
+That also validates the down-payment slider — a quarter of your customers paid well above the minimum, so it's not a decorative control.
+
+5. What the sheet can't tell me — and this is the gap worth closing.
+
+There's no sanctioned interest rate, tenure, or subsidy amount column. Those are exactly the fields I was hoping to check the rate table against, particularly Indian Bank and Canara above ₹2L, which are still marked "assumed" in bank-rules.json. If you add three columns going forward — rate, tenure, subsidy — a few months of entries would let you verify every rate in the tool from real letters instead of brochures.
+
+Small thing: bank names are inconsistent (SBI/sbi, BOB, pnb, union bank). Doesn't matter at 24 rows; will matter when you want to count or filter. A dropdown in that column would fix it going forward.
+
+Want me to make the ₹65,000 change and add the ₹2 lakh advisory note?
