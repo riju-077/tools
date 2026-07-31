@@ -1,0 +1,60 @@
+Here it is again, slowly, in order.
+
+There are two types of ad companies
+
+Google AdSense — the big, trusted one. Pays the most. But it's picky: a real person reviews your site, it takes weeks, and they can say no.
+
+Monetag / PropellerAds — small ad companies. They accept almost anyone in about a day. But they pay less.
+
+You can use both at the same time
+
+This is the key thing. Google allows other ad companies on the same page. I checked their official help page to be
+sure. So it isn't "pick one" — you can runoogle to review you.
+
+That's exactly what you suggested, and it'
+
+The one trap to avoid
+
+Monetag will offer you a type of ad calledthat secretly opens a second tab in thebackground — you've definitely seen these on movie streaming sites.
+
+They pay Monetag's best rates, which is why they'll push you to use them. Don't.
+
+Two reasons:
+- Google bans them. If you have popunders tion gets rejected.
+- Your site is a loan calculator. If a customer types in their money details and a random gambling tab opens, they
+stop trusting the tool. Possibly your comping this link.
+
+So use only the plain banner ads — the borly on the page.
+
+About the money — please read this part
+
+A new website earns almost nothing at firs you use.
+
+If 100 people visit per day, you'd make rog won't even pay you until you've earnedabout ₹450, so month one might pay you nothing at all.
+
+That's not a mistake or a bad setup. That's just how it works. Earnings follow visitors:
+
+- 100 visitors a day → about ₹300/month
+- 5,000 visitors a day → about ₹13,000/mon
+
+Same site, same ads. Only the visitor coun
+
+So the real work isn't choosing an ad comp
+
+Which brings up one problem
+
+Google will probably reject a page that's g else on it. They consider a page withjust input boxes "not enough content to be worth ads."
+
+The fix is writing some genuinely useful pages alongside the calculator — how PM Surya Ghar actually works, when
+the subsidy really arrives, common questioeady know all of this from your job betterthan the people currently writing about it online.
+
+That same writing is also what brings visitors from Google Search. So it solves both problems at once.
+
+What to do, in order
+
+1. Put the site online (Cloudflare) — needed for everything else
+2. Sign up for Monetag, banner ads only
+3. Apply for AdSense the same week — the clock is long, so start it early
+4. Write the explainer content while waiti
+
+Now — what did you want to tell me?
