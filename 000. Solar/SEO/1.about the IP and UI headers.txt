@@ -1,0 +1,48 @@
+Good — this one's quick, and it unblocks Cloudflare.
+
+Two things to know first:
+
+You'll get a free address either way. Cloudflare gives you something like solarhisab.pages.dev for free. A real domain like solarhisab.in costs roughly ₹700–1,000/year. You can start free and buy the domain later — the name you pick now works for both, so choose it once.
+
+One thing to avoid: don't put "PM Surya Ghar" in the name itself (like pmsuryaghar.in). It's a government scheme name, and a site using it can look like an official government site — that's a legal headache you don't want. Using it in your page headings and text is completely fine and good for SEO. Just not the address.
+
+Now, there are two directions you can go:
+                                                                                                                Descriptive — like solaremicalculator.in. tly, and someone searching "solar EMIcalculator" sees their exact words in your address. Slightly better for ranking. Downside: boring, and it locks you into being only a calculator.
+
+Brandable — like solarhisab.in ("hisab" = oth Bengali and Hindi). Memorable, soundslike a real product, and leaves room to grow into a full PM Surya Ghar guide site later — which is exactly the
+direction we discussed for SEO. Slightly lhat matters much less than it used to.
+
+My honest recommendation is brandable, becdes writing explainer content — so the sitewon't stay "just a calculator" for long.
+
+● User answered Claude's questions:
+· Which site name direction do you wantlator
+
+Good choice — it's the safest one for Goog the page does.
+
+So the name is Solar EMI Calculator, and tthing like solaremicalculator.pages.dev.
+
+Let me look at what the page currently saywhat needs changing.
+
+  Searched for 1 pattern, read 1 file
+
+Good news — the page already says "Solar Le you picked is basically what's on therealready, so there's almost nothing to change.                                                                     
+The only thing that was ever a "placeholder" was a note in the code saying we hadn't decided yet. The name itself was already right.
+
+
+
+The heading stays "Solar Loan EMI Calculat in it is better for Google, since peoplesearch that phrase.
+
+The web address becomes solaremicalculator — shorter, easier to type and say out loud. Nobody wants to type
+solarloanemicalculator.in.
+
+That mismatch is normal and totally fine —don't have to be identical.
+
+If that sounds right to you, here's what Igic touched):
+
+1. In index.html — remove the code commenttill a placeholder, since it's now decided
+2. In CLAUDE.md — tick off "final site name" from the open-items list, and record that the address will be
+solaremicalculator
+
+That's it. No changes to the calculator ithat could break the maths.
+
+Want me to make those two changes?
