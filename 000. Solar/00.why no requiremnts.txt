@@ -11,3 +11,9 @@ But this project has zero Python code. It's plain HTML + CSS + JavaScript that r
 So the "dependency list" for this project is effectively: a web browser, which everyone already has. The equivalent files by ecosystem would be requirements.txt (Python) or package.json (Node/JS) — and we intentionally have neither, because a no-dependency static site is faster, safer, and ranks better (CLAUDE.md §3, §4). That simplicity is a feature, not something missing.
 
 ▎ The python -m http.server I mentioned earlier isn't a project dependency — it's just a throwaway way to view the files locally. It uses Python's built-in server, again nothing to install.
+
+
+
+python -m http.server
+
+Then open http://localhost:8000 in your browser.
