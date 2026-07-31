@@ -1,0 +1,11 @@
+My fault — I wrote too much. Let me say it in four lines.
+
+Yes, do exactly what you said. Sign up for Monetag now (approved in a day), and apply for AdSense at the same time. Google allows both together. Your plan was right.
+
+One rule: Monetag will offer you something called "popunder" ads — the kind that open a new tab by themselves. Don't turn those on. Google bans them, and using them will get your AdSense application rejected. Use only the normal banner ads.
+
+Don't expect much money at first. With a new site you might make ₹300 in the first month. That's normal, not a mistake. The money only grows when visitors grow.
+
+Both need the site to be online first. So Cloudflare is still the next step, no matter which ad company you use.
+
+Want me to help you put the site online now? That's the only thing blocking everything else.
