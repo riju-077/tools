@@ -1,0 +1,58 @@
+Sure. Here's the simplest way to picture it.
+
+Google has a program called a crawler — a robot that wanders the internet, opens web pages, reads them, and adds them to Google's search list. When your site goes live, that robot will show up at your door.
+
+These two files are notes you leave on the door for that robot.
+
+robots.txt — "what you're allowed to look at"
+
+This is the permission note.
+
+Your file says exactly two useful things:
+
+- User-agent: * — "this note is for every search robot, not just Google"
+- Allow: / — "you may read the whole site, nothing here is private"
+
+That's it. That's the whole rule.
+
+Some websites use this file to block robots — a shopping site might say "don't look at the checkout page." You have nothing to hide (it's one public calculator), so yours just says "go ahead, read everything."
+
+The last line points at your other file: "by the way, the list of my pages is over there."
+
+sitemap.xml — "here is a list of my pages"
+
+This is the table of contents.
+
+Instead of making the robot wander around guessing what pages exist, you hand it a list. Right now your list has exactly one page on it — your calculator — because that's all you have.
+
+Reading your file line by line:
+
+┌──────────────┬─────────────────────────────────────────────────────────┐
+│     Line     │                      Plain English                      │
+├──────────────┼─────────────────────────────────────────────────────────┤
+│ <loc>        │ The page's address                                      │
+├──────────────┼─────────────────────────────────────────────────────────┤
+│ <lastmod>    │ When you last meaningfully changed it (31 July)         │
+├──────────────┼─────────────────────────────────────────────────────────┤
+│ <changefreq> │ "I update this about monthly" — a hint, not a promise   │
+├──────────────┼─────────────────────────────────────────────────────────┤
+│ <priority>   │ How important this page is compared to your other pages │
+└──────────────┴─────────────────────────────────────────────────────────┘
+
+A note on priority: it's 1.0 (the highest) but with only one page that number does nothing — it's comparing the page against itself. It starts mattering when you have five pages and want to say "the calculator matters more than the About page."
+
+Do you actually need them?
+
+Honestly: not really, not for one page. Google would find and index your site fine without either file. I wrote them anyway for one specific reason —
+
+When you sign up for Google Search Console (the free tool that shows you what people typed into Google to find your site — you'll want this), it asks you to submit a sitemap. Having the file ready means that step is already done. And it's the standard, expected setup, so it costs nothing to have.
+
+The one thing you must remember
+
+Both files contain a fake address: solaremicalculator.pages.dev. I made that up — it's your planned name, but Cloudflare hasn't actually given it to you yet.
+
+Once Cloudflare Pages is connected and tells you your real address, that address has to be corrected in both files — one line in robots.txt (line 18), one line in sitemap.xml (line 20). If it's wrong, you're handing the robot a note pointing at a house that doesn't exist.
+
+I put loud !! UPDATE THIS !! comments right above both lines so they're hard to miss. And I'll do it for you when we get there — just flagging it so you know why it's not finished yet.
+
+Anything there you want me to go deeper on?
