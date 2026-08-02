@@ -1,0 +1,27 @@
+What a sitemap is, and why this screen exists
+
+Google mostly finds new websites by following links. It reads a page it already knows, sees a link to somewhere else, goes there, and so on — crawling outward across the web like a spider.
+
+Your site has a problem with that: nothing on the internet links to it. It went live two hours ago. There's no trail for Google to follow, so on its own it might not stor ever.
+
+A sitemap is the way around that. It's a small format machines read. Yours already exists — yousaw it referenced at the bottom of robots.txt. It currently lists exactly one address, your homepage, because your site is
+one page. That's completely normal.
+
+Submitting it here is you saying: "Don't wait ts my address, in writing, from the verifiedowner." That's the whole point of the verification you just did — Google only accepts this instruction from someone who
+proved they own the site.
+
+What it does: puts your page into Google's queu
+What it doesn't do: guarantee you get listed, and certainly not that you rank. Those come later, and depend on your content
+being genuinely useful — which is why the expla more than any of this setup.
+
+Do this
+
+In the empty box after https://solaremicalculat
+
+sitemap.xml
+
+Just the filename. Google has already filled inmpleting it, not retyping it.
+
+Then click SUBMIT.
+
+You're looking for Status: Success and Discoverw. That "1" is your homepage, and seeing it means Google read the file and understood it.
