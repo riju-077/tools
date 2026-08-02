@@ -1,0 +1,111 @@
+What we're about to set up
+
+Right now your site exists in two places: on your laptop, and in your private GitHub repo. Neither is on the internet.
+
+Cloudflare Pages is a free service that watches your GitHub repo. Every time you git push, it copies the files out of the repo and puts them on Cloudflare's servers around the world. Someone in Kolkata opening your site gets it from a nearby machine — that's why it's fast, and why it can't crash. There's no program running; it's just files being handed out.
+
+The important mental model: Cloudflare serves whatever is in your repo, as-is. You don't "upload" anything. GitHub is the source of truth, and pushing is publishing.
+
+---
+Before we start — one thing I need to flag
+
+That last sentence has a consequence. Cloudflare will publish every tracked file in the repo, not just index.html. Here's what's tracked right now:
+
+index.html  style.css  script.js  bank-rules.json  assets/favicon.svg
+robots.txt  sitemap.xml                    ← the actual website
+README.md   claude.md   tests/ (3 files)   ← NOT meant for visitors
+
+So solaremicalculator.pages.dev/claude.md would open your project spec in anyone's browser. That file names Evergreen Solar as your employer, describes your job in loan processing, and contains your internal decisions and working notes. Google can index it.
+
+The good news: your pics/ folder is in .gitignore, so real customer names were never committed and are not at risk. This is only about the three doc/test items.
+
+● User declined to answer questions
+· How do you want to handle claude.md, README.md and tests/ before going live? (Move site into public/ (Recommended) / Block them with _redirects / Publish everything, don't care)
+
+What would you like to clarify?
+
+To help you frame it, here are the things people usually want to pin down at this point:
+
+- "Isn't my repo private? How can anyone see those files?" — Worth asking. The short answer is that the repo stays private on GitHub, but Cloudflare reads it and republishes the files openly. Privacy on GitHub and privacy on the live site are two separate things.
+- "How would anyone even find /claude.md? Nobody knows it's there." — Fair question, and the answer isn't obvious.
+- "How much does this actually matter?" — i.e. is this a real problem or me being cautious. Happy to give you a straight assessment.
+- "What does moving files into public/ change for me day to day?" — mainly your local preview command, and whether your existing git push habit still works the same.
+- "Can I just delete claude.md from the repo instead?" — There's a reason I didn't offer that as an option, and it's worth explaining before you pick.
+- Or something else entirely — including whether this needs solving before we connect Cloudflare at all, versus after.
+
+Ask away, and I'll answer before we go any further.
+
+✻ Cogitated for 1m 22s
+
+❯ tell me which files and folders are at risk . the things that i cant let the world gets there hands on
+
+Good question — let me actually look rather than guess.
+
+  Searched for 1 pattern, read 1 file
+
+That gives me a clear picture. Two things I want to check before I answer — one of them matters more than the files you asked about.
+
+  Ran 1 shell command
+
+Here's the honest inventory. I found something more important than the files you asked about.
+
+🔴 Must not be public
+
+1. The comment inside index.html (lines 307–315) — this one is different
+
+<!-- Everything below is written from Akash's own ground-level sources:
+     real Jan Samarth approval letters, the PM Surya Ghar subsidy
+     disbursal register, and his own customer records. -->
+
+Why this is the worst one: no folder trick can hide it. It's inside the page itself. Anyone who presses Ctrl+U on your live site sees it — that's a normal thing people do, not hacking. And it states in writing that your site content comes from approval letters and customer records you have access to through your job.
+
+Of everything here, that's the sentence with actual professional consequences for you. It needs deleting either way, whatever we decide about the folder structure.
+
+2. claude.md
+
+- Names Evergreen Solar as your employer — 5 times
+- Names you — 35+ times
+- States your job is loan processing/data entry
+- Says the bank rates were "collected by Akash at work" from real approval letters
+- Says the site's secondary audience is "Evergreen Solar's own sales team"
+- Your monetization plans, your income expectations, your working style
+
+Nothing illegal, no customer data. But it's your private working notebook, and it ties your name, your employer, and your data sources together in one document.
+
+🟡 Minor — a first name, nothing more
+
+3. bank-rules.json — says "THIS IS THE FILE YOU (AKASH) EDIT" and "Akash's own ground-level rule, NOT a published bank rule".
+
+This file must be public — your calculator downloads it in the browser to work. It can't be hidden. But it's only your first name with no employer attached, so the risk is small. Two-minute reword.
+
+The second line has a different problem: it publicly says your ₹1 lakh minimum is made up rather than a bank rule, which slightly undercuts the tool's authority. Worth softening for that reason more than privacy.
+
+🟢 Harmless — publish these without worry
+
+4. README.md — I read it fully. Zero personal information, no employer, no customer data. Just "here's how the project is built and how to update a rate." Thousands of sites have one public. No action needed.
+
+5. tests/ (3 files) — I checked. Only invented test numbers like 210000, 748400. No real customer anywhere.
+
+✅ Not at risk at all
+
+pics/ (your work screenshots with real customer names) and temp.txt.
+
+I verified this two ways, not just one: they're in .gitignore, and I searched the entire git history for them — NONE — never committed, not in history. They never left your laptop. That was the one thing that could have been genuinely serious, and it's clean.
+
+Also worth knowing: Cloudflare only serves your current files, never your git history. Old deleted versions can't be fetched from the live site.
+
+---
+What I'd suggest
+
+Two fixes are needed regardless of anything else, and both are small:
+
+1. Delete the sourcing comment from index.html — the actual risk
+2. Reword the two Akash notes in bank-rules.json
+
+Then claude.md is the only real decision left, and moving the site into a public/ folder handles it permanently — including any private note you add to the repo in future.
+
+Want me to do those two fixes now, and then we carry on to the folder question and Cloudflare?
+
+✻ Churned for 1m 6s
+
+───────────────────────────────────
