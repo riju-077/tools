@@ -1,0 +1,28 @@
+Sure — plainly.
+
+1. The favicon.ico file
+
+Right now your icon exists in one place: assets/favicon.svg.
+
+Google's crawler, out of habit, also looks for a file called favicon.ico sitting at the front door of your site — literally solaremicalculator.pages.dev/favicon.ico. That file doesn't exist, so if Google looks there first, it finds nothing.
+
+What I'd do: make a second copy of your same gold-sun-on-blue icon, in the older .ico format, and put it at the front door. Then add one line to index.html pointing at it.
+
+What changes for you: nothing visible today. It just gives Google two places to find your icon instead of one. Your existing SVG stays exactly as it is — browsers keep using that.
+
+Honest expectation: this does not make the globe disappear tomorrow. Google still has to come back and look, which takes days to weeks. This is "remove the excuse," not "fix it now."
+
+2. The site name block
+
+Look at the screenshot again — above your blue title it says Cloudflare.
+
+That's supposed to be your site's name. Google is guessing, and it guessed wrong, because pages.dev belongs to Cloudflare and you're a guest on their address.
+
+What I'd do: add a small hidden block of text in the page's <head> — invisible to visitors — that tells Google directly: "this site is called Solar Loan EMI Calculator." It's the same kind of thing as the two structured-data blocks you already have on lines 43 and 63.
+
+What changes for you: if Google accepts it, that "Cloudflare" line becomes "Solar Loan EMI Calculator." Nothing on the visible page changes at all.
+
+Honest expectation: Google treats this as a suggestion, not a command. On a shared subdomain like yours it often ignores it and keeps showing the domain owner. Buying solaremicalculator.in is what actually solves this properly. But the block costs nothing and sometimes works.
+
+---
+Both are small, safe, and change nothing a visitor sees. Want me to go ahead with these two?
