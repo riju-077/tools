@@ -1,0 +1,99 @@
+What Search Console is, and why it matters
+
+Right now Google doesn't know your site exists. Nobody links to it, so its crawler has no path to find it. Left alone, that can take months.
+
+Google Search Console is Google's free tool where you say "this site is mine, here's a map of it, please look." It also becomes your feedback loop later — which search terms brought people, which pages Google refuses to index, whether anything's broken. It's the single highest-value thing you can do for the site right now.
+
+Which Google account to use
+
+You've got three accounts in play now (rijudutt GitHub). For this one, pick deliberately:
+
+▎ Use the Google account you'll want AdSense mo
+
+Search Console and AdSense get linked together property between accounts is a nuisance. Ifthat's aadutta7@gmail.com, use that. Just make a note of which one you chose — you'll need it again.
+
+Step 1 — Create the property
+
+1. Go to search.google.com/search-console
+2. Sign in with your chosen account
+3. You'll be offered two boxes side by side:
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┬──────────────────────┐
+│                                            ❌                      │    ✅ URL prefix     │
+├─────────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────┤
+│ Left box. Needs you to edit DNS records for t — pages.dev belongs  │ Right box. This is   │
+│ to Cloudflare, not you.                                                                         │ yours.               │
+└────────────────────────────────────────────────────────────────────┴──────────────────────┘
+
+4. In the URL prefix box (right side), type exa
+
+https://solaremicalculator.pages.dev/
+
+Include the https:// and the trailing /.
+
+5. Click Continue
+
+Step 2 — Verification
+
+Google now needs proof you own the site. It'll
+
+▎ Choose "HTML tag" — usually under "Other veri
+▎
+▎ Not "HTML file", which means downloading a fin your project folder. The tag is one line oftext, and I'll put it in the right place for you.
+
+It'll show you something like:
+
+<meta name="google-site-verification" content="AbC123xYz_someLongRandomString" />
+
+Copy that whole line and paste it to me. Don't click "Verify" yet — it'll fail, because the tag isn't on your site until you
+push.
+
+Then: I add it to index.html → you push → wait then click Verify.
+
+(That string isn't a password. It's a random mao paste here.)
+
+Go create the property, and send me the tag.
+
+✻ Baked for 31s
+
+❯ ok ok ok wait slow down tell me first which acc dutta?
+
+Use aadutta7@gmail.com.
+
+The reason is money, not technical. AdSense doeually pays into a bank account, and Googleverifies your identity for that: name, address, PAN, and a bank account that matches. So the Google account you build this on should be yours, in your real name, the one whoyour PAN and bank account.
+
+aadutta7@gmail.com is already your identity eve— it's your GitHub account and the name on everycommit. Keep the earning side on it.
+
+Two things that might be worrying you, and shouldn't:
+
+- "But Cloudflare is on rijudutt84 — is that a problem?" No. Cloudflare just serves files; no money passes through it, and it
+never needs to match anything. Leave it. Mixingcompletely normal.
+- "Can I change it later?" For Search Console, yes but it's fiddly. For AdSense it's genuinely painful — you get one AdSense
+account per person, and starting over on a diffe. That's why it's worth pausing on now, which is exactly what you did.
+
+One thing to be sure about: if rijudutt84 belongs to someone else — a family member — then definitely don't use it. Earnings
+would be tied to their identity and their bank later is worse than it sounds.
+
+So: sign into Search Console with aadutta7@gmai there. Take your time.
+
+
+
+Added at index.html:13 — inside <head>, near the top, well before <body>, exactly where Google asks for it. I left a comment above it saying do not delete it: Google re-checks periodically, and removing it later would silently un-verify your site.
+
+No stylesheet or script changed, so no version bump needed.
+
+Push it
+
+git add -A && git commit -m "Add Google Search Console verification tag" && git push
+
+Then — and this order matters
+
+1. Wait for Cloudflare to finish. About 40 seconds. Don't rush this: if you click Verify before the deploy lands, Google looks at the old page, finds no tag, and fails.
+2. Confirm the tag is actually live. Go to solaremicalculator.pages.dev, press Ctrl+U (View Source), then Ctrl+F and search for google-site-verification. If you see it, Google will see it too.
+3. Then click VERIFY in Search Console.
+
+You should get "Ownership verified".
+
+▎ If it fails, don't panic or change anything — it's almost always just the deploy not having landed yet. Wait a minute and click Verify again.
+
+Once it's verified, tell me. The next bit is the actual point of all this: submitting your sitemap and asking Google to index the page.
