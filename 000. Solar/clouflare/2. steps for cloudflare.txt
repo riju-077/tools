@@ -1,0 +1,68 @@
+Good. Before the steps, one setting decides your web address permanently-ish, so read this first.
+
+⚠️ The one thing we must not get wrong
+
+Cloudflare will ask for a project name. That name becomes your web address:
+
+project name "solaremicalculator"  →  https://solaremicalculator.pages.dev
+project name "solar"               →  https://solar.pages.dev
+
+It will suggest solar, because that's your repo name. Do not accept it.
+
+Your robots.txt and sitemap.xml already have solaremicalculator.pages.dev written inside them — those are the files that tell Google where your site lives. If the name doesn't match, Google gets pointed at an address that doesn't exist.
+
+▎ Type exactly: solaremicalculator (one word, all lowercase, no spaces, no hyphens)
+
+If Cloudflare says it's taken, stop and tell me — don't improvise a name. We'll pick one together and update those two files to match.
+
+---
+Part 1 — Create a Cloudflare account
+
+Skip if you already have one.
+
+1. Go to dash.cloudflare.com/sign-up
+2. Enter your email and a password → Sign Up
+3. Check your inbox for a verification email and click the link
+4. If it asks for a card or offers paid plans, choose the Free plan. Pages needs no payment details at all
+
+Part 2 — Connect your repo
+
+5. In the Cloudflare dashboard, find Workers & Pages in the left sidebar → Create → choose the Pages tab → Connect to Git
+  - The wording shifts between redesigns. You're looking for "Pages" and "Connect to Git" — not "Upload assets", which is the manual method we don't want.
+6. Click Connect GitHub. A GitHub window opens asking for authorization → Authorize Cloudflare
+7. GitHub asks which repos to grant access to. Choose Only select repositories → pick solar → Install & Authorize
+  - This is a normal permission grant, not making anything public. Your repo stays private.
+8. Back in Cloudflare, select solar from the list → Begin setup
+
+Part 3 — The settings screen
+
+Fill it in exactly like this:
+
+┌────────────────────────┬─────────────────────────────────────────────────────┐
+│         Field          │                     What to put                     │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ Project name           │ solaremicalculator ← the one from the warning above │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ Production branch      │ main                                                │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ Framework preset       │ None                                                │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ Build command          │ Leave completely empty                              │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ Build output directory │ /                                                   │
+└────────────────────────┴─────────────────────────────────────────────────────┘
+
+Why empty: your site has no build step. Plain HTML, CSS and JavaScript are already finished files — there's nothing to compile. Cloudflare just copies them out and serves them. If you pick a framework preset here it will try to run a build, fail, and the deploy will error.
+
+9. Click Save and Deploy
+10. Watch the log. You'll see it fetch your repo and finish with Success. Takes 30–60 seconds
+
+---
+When it finishes, tell me:
+
+1. The URL it gives you — and whether you got solaremicalculator or had to use something else
+2. Whether the deploy succeeded or errored — paste the log if it errored
+
+Then we'll check the live site together, confirm claude.md really is unreachable, and fix up those two SEO files if the name changed.
+
+Go ahead — I'll wait.
